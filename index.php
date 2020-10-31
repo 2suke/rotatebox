@@ -1,5 +1,8 @@
 <?php
-		require("db/data_access/cards.php");
+	require(dirname(__FILE__)."/db/data_access/cards.php");
+
+	$dao = new CardAccesser();
+	$cards = $dao->getAllCards();
 ?>
 <html>
 	<head>
@@ -14,9 +17,6 @@
 			<th>name</th>
 		</tr>
 		<?php
-			$dao = new CardAccesser();
-			$cards = $dao->getAllCards();
-
 			foreach ($cards as $card) {
 				echo "<tr>";
 				echo "<td>$card[id]</td>";
