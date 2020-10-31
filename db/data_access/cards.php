@@ -38,6 +38,13 @@ class CardAccesser extends DataAccesser {
         $this->dbClose();
     }
 
+    function deleteCard($id){
+        $dbh = $this->dbConnect();
+        $command = "DELETE FROM card WHERE id='$id'";
+        $res = $dbh->query($command);
+        $this->dbClose();
+    }
+
     function setNewCard(){
         $dbh = $this->dbConnect();
         $command = "SELECT * FROM card";
