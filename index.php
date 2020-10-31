@@ -6,7 +6,8 @@
 		<title>Rotatebox</title>
 	</head>
 	<body>
-	<h3>all cards</h3>
+	<h3>all cards</h3>	
+		<a href="regist.php">新規登録</a>
 		<table>
 		<tr>
 			<th>id</th>
@@ -19,7 +20,7 @@
 			foreach ($cards as $card) {
 				echo "<tr>";
 				echo "<td>$card[id]</td>";
-				echo "<td>$card[name]</td>";
+				echo "<td><a href=\"detail.php?id=$card[id]\">$card[name]</a></td>";
 				echo "</tr>";
 			}
 		?>

@@ -11,5 +11,21 @@ class CardAccesser extends DataAccesser {
 
         return $res;
     }
+
+    function getCardDetail($id){
+        $dbh = $this->dbConnect();
+        $command = "SELECT * FROM card WHERE id=$id";
+        $res = $dbh->query($command);
+        
+        return $res->fetch();
+    }
+
+    function setNewCard(){
+        $dbh = $this->dbConnect();
+        $command = "SELECT * FROM card";
+        $res = $dbh->query($command);
+
+        $this->dbClose();
+    }
 }
 ?>
