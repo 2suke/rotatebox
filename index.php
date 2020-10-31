@@ -10,7 +10,7 @@
 	</head>
 	<body>
 	<h3>all cards</h3>	
-		<a href="regist.php">新規登録</a>
+		<a href="create.php">新規登録</a>
 		<table>
 		<tr>
 			<th>id</th>

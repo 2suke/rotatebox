@@ -4,7 +4,6 @@
 	$id = $_GET['id'];
 	$dao = new CardAccesser();
 	$card = $dao->getCardDetail($id);
-	var_dump($card);
 ?>
 <html>
 	<head>
@@ -14,6 +13,7 @@
 		<?php
 			echo "<h3>$card[name]</h3>";
 			echo "<p>id: ".$_GET['id']."</p>";
+			echo "<p>name: ".$card['name']."</p>";
 		?>
 		
 		<a href="edit.php?id=<?php echo $id ?>">edit</a>

@@ -19,8 +19,7 @@
         <form action="db/update_card.php" method="post">
             <input type="hidden" name="id" value=<?php echo $id ?>>
             <label>カード名</label>
-            <input type="text" name="name" id="card-name" value=<?php echo $card['name']?>>
-
+            <input type="text" name="name" id="card-name" value=<?php echo $card['name']?>><br>
             <input type="submit" value="更新する">
         </form>
 	</body>
