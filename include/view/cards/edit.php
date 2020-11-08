@@ -3,10 +3,8 @@
 		<title>Rotatebox</title>
 	</head>
 	<body>
-		<?php
-			echo "<h3>$card[name]</h3>";
-			echo "<p>id: ".$_GET['id']."</p>";
-		?>
+		<h3><?php echo $card['name'] ?></h3>
+		<p>id: <?php echo $_GET['id'] ?></p>
 		<a href="index.php">home</a>
 
         <form action="./update.php" method="post">
