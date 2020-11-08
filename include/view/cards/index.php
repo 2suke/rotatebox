@@ -13,11 +13,7 @@
 		</tr>
 		<?php
 			foreach ($cards as $card) {
-				echo "<tr>";
-				echo "<td>$card[id]</td>";
-				echo "<td><a href=\"/cards/detail.php?id=$card[id]\">$card[name]</a></td>";
-				echo "<td><a href=\"/cards/delete.php?id=$card[id]\">delete</a></td>";
-				echo "</tr>";
+				include $_SERVER['DOCUMENT_ROOT'].'/../include/view/partial/card_table.php';
 			}
 		?>
 		</table>
