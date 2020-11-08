@@ -8,7 +8,7 @@ class DataAccesser {
   private $dbPassword;
 
   public function __construct() {
-    $config = include(__DIR__."/../../config.php");
+    $config = include_once($_SERVER['DOCUMENT_ROOT'].'/../config/config.php');
     $this->dbName = $config['DB_NAME'];
     $this->dbHost = $config['DB_HOST'];
     $this->dbUser = $config['DB_USER'];
